@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: "Manrope", sans-serif; /* 500 700*/
+  font-size: 13px;
+
+  /* Colors */
+
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Light-Grayish-Blue);
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 45px auto;
+  height: 500px;
+  width: 330px;
+  border-radius: 10px;
+}
+
+.container .image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 200px;
+  background-image: url(../images/drawers.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+article {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 35px;
+  height: calc(500px - 200px);
+  display: flex;
+  flex-direction: column;
+}
+
+article h3 {
+  font-size: 1.2rem;
+  color: var(--Very-Dark-Grayish-Blue);
+  font-weight: 700;
+}
+article > p {
+  font-size: 1.1rem;
+  color: var(--Desaturated-Dark-Blue);
+  font-weight: 500;
+}
+article .profile {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  margin-top: 15px;
+}
+article .profile img {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+}
+article .profile .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+  width: 100%;
+}
+article .profile .info .name {
+  color: var(--Very-Dark-Grayish-Blue);
+  font-weight: 700;
+}
+article .profile .info .date {
+  color: var(--Grayish-Blue);
+  font-weight: 500;
+}
+article .profile #share-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Light-Grayish-Blue);
+  color: var(--Desaturated-Dark-Blue);
+  width: calc(35px / 2);
+  height: calc(35px / 2);
+  border-radius: 50%;
+  padding: calc(35px / 2);
+  font-size: 1.2rem;
+}
+
+@media (min-width: 775px) {
+  .container {
+    flex-direction: row;
+    height: 250px;
+    width: 700px;
+  }
+  .container .image {
+    height: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    background-position: left;
+  }
+}
